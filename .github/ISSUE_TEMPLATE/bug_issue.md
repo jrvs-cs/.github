@@ -1,8 +1,12 @@
 ---
-name: Bug Report
-description: If something is not working as expected
+name: Bug report
+about: Report unexpected behaviour
+title: 'ID#: ADD TITLE HERE'
 labels: bug
+assignees: ''
+
 ---
+
 ## Summary of the Bug
 
 ### Expected Behaviour
