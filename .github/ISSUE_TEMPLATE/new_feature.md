@@ -3,18 +3,7 @@ name: New Feature Idea/Request
 about: Suggest a new feature 
 title: '[FEATURE]'
 labels: enhancement
-assignees: ''
-body: 
-  - type: dropdown
-    id: feature_type
-    attributes:
-    label: Why is this feature proposed?
-    options:
-      - New Feature
-      - Idea Proposal
-      - Feature to resolve existing issue
-    validations:
-      required: true
+assignees: ''    
 ---
 
 ## Summary of the feature
