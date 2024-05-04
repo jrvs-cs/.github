@@ -1,0 +1,62 @@
+name: Bug/Issue Form
+description: Report an issue
+title: '[BUG] [ID]'
+labels: bug
+body: 
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How severe is this bug/issue?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+      multiple: true
+    validations:
+      required: true
+  
+  - type: textarea
+    attributes:
+      label: What is the current behaviour?
+      placeholder: How does the application currently behave?
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: What is the expected behaviour?
+      placeholder: Please describe how you expected the application to behave
+    validations:
+      required: true
+      
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      placeholder: Please describe what a developer will need to do to reproduce the bug or issue
+    validations:
+      required: false
+    
+  - type: textarea
+    attributes:
+      label: Supporting media
+      placeholder: |
+        Include here code, link to code, snapshots, errors and any other details to further communicate the issue
+        Information about the system where you experienced this bug (windows/linux/git branch etc.)
+    validations:
+      required: false
+      
+  - type: textarea
+    attributes:
+      label: Possible Solution
+      placeholder: Any ideas for a possible solution?
+    validations:
+      required: false
+    
+  - type: checkboxes
+    attributes:
+      label: Anything else?
+      description: Todos to complete opening this bug
+      options:
+        - label: Was this submitted in the Defect report? (if required)
+          required: true
