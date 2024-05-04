@@ -2,7 +2,14 @@ name: Bug/Issue Form
 description: Report an issue
 title: '[BUG] [ID]'
 labels: bug
-body: 
+body:   
+  - type: textarea
+    attributes:
+      label: Summary of issue
+      placeholder: Short summary of the issue identified and the impact of this issue
+    validations:
+      required: false
+      
   - type: dropdown
     id: severity
     attributes:
@@ -55,8 +62,25 @@ body:
     
   - type: checkboxes
     attributes:
-      label: Anything else?
+      label: Submit Bug Checklist
       description: Todos to complete opening this bug
       options:
         - label: Was this submitted in the Defect report? (if required)
           required: true
+        - label: Did you review the infomation provided? 
+          required: true
+        - label: Did you include any snapshots or references to code?
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Definition of Done
+      value: |
+        - [ ] A Unit test is created to reproduce the bug for the observed beahviour and proposed solutions passes the test
+        - [ ] A PR is created, is reviewed, and approved (you can link this issue to the PR)
+        - [ ] No TODOs left in the code unless explained in the PR. If something else is still open, this is summarized in a comment in the issue
+        - [ ] Documentation is updated if required
+    validations:
+      required: false
+
+
